@@ -1,0 +1,425 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #212121;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  h1, h2 {
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    color: #ccc;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #66d9ef;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #fff;
+  }
+  
+  /* Header Styles */
+  #home {
+    background-image: linear-gradient(to bottom, #333, #444);
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  #home h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  /* Education, Projects, Experience, Achievements, About Styles */
+  section {
+    padding: 20px;
+  }
+  
+  .project, .experience, .achievement, .education, .hobby, .about-me, .career-goal, .education, .certification {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+  }
+  
+  .project h2, .experience h2, .achievement h2, .education h2, .hobby h2, .about-me h2, .career-goal h2, .education h2, .certification h2 {
+    margin-bottom: 10px;
+  }
+  
+  .project p, .experience p, .achievement p, .education p, .hobby p, .about-me p, .career-goal p, .education p, .certification p {
+    margin-bottom: 20px;
+  }
+  
+  .achievement ul, .education ul, .certification ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .achievement li, .education li, .certification li {
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .achievement li::before, .education li::before, .certification li::before {
+    content: "\2022";
+    color: #66d9ef;
+    font-weight: bold;
+    margin-left: -1em;
+  }
+  
+  /* Navigation Bar Styles */
+  #nav-bar {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #nav-bar ul {
+    list-style: none;
+  }
+  
+  #nav-bar li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  #nav-bar a {
+    color: #fff;
+    transition: transform 0.5s;
+  }
+  
+  #nav-bar a:hover {
+    color: #66d9ef;
+    transform: translateX(10px);
+  }
+  
+  #nav-bar .active {
+    color: #66d9ef;
+  }
+  
+  /* Hover Effects for Projects */
+  .project .description {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .project:hover .description {
+    opacity: 1;
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+  }
+  
+  .hero p {
+    font-size: 24px;
+  }
+  
+  .hero button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .hero button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Icons */
+  i {
+    font-size: 48px;
+    margin: 20px;
+  }
+  
+  .fa {
+    font-size: 40px;
+    margin: 20px;
+    color: #555;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .fa:hover {
+    color: #3498db;
+    transform: scale(1.2);
+  }
+  
+ /* Animations */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    } /* This closing brace was missing */
+  }
+
+  /* Hero Section Styles */
+.hero {
+    position: relative; /* Allows positioning of the slider and content */
+    overflow: hidden; /* Hides overflow content */
+    height: 100vh; /* Full viewport height */
+    color: white; /* Text color */
+    text-align: center; /* Center align text */
+}
+
+/* Hero Slider Styles */
+.hero-slider {
+    display: flex; /* Enables flexbox layout */
+    transition: transform 0.5s ease; /* Smooth transition effect */
+    height: 100%; /* Full height of the hero section */
+}
+
+.hero-slider img {
+    min-width: 100%; /* Each image takes full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Hero Content Styles */
+.hero-content {
+    position: absolute; /* Overlay the content over the images */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for content size */
+    z-index: 1; /* Ensure content is above images */
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px; /* Button padding */
+    background-color: #007BFF; /* Button background color */
+    border: none; /* Remove border */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slider {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Add transition effect */
+}
+
+.slide {
+    min-width: 100%; /* Ensure each slide takes full width */
+    opacity: 0; /* Start with all images invisible */
+    transition: opacity 1s ease-in-out; /* Transition for fade effect */
+}
+
+.slide.active {
+    opacity: 1; /* Show active image */
+}
+
+/* Certification Styles */
+.certification {
+    margin-bottom: 20px; /* Spacing between sections */
+    padding: 20px; /* Inner padding */
+    border: 2px solid #66d9ef; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #444; /* Background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Certification Title */
+.certification h2 {
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 15px; /* Space below title */
+    color: #66d9ef; /* Title color */
+}
+
+/* Certification List */
+.certification ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+/* Certification List Items */
+.certification li {
+    margin: 10px 0; /* Space between items */
+    padding: 10px; /* Inner padding */
+    background-color: #555; /* Item background */
+    border-radius: 3px; /* Rounded corners */
+    position: relative; /* For positioning pseudo-element */
+}
+
+/* Icon for Certifications */
+.certification li::before {
+    content: "\2022"; /* Custom bullet */
+    color: #66d9ef; /* Bullet color */
+    font-weight: bold; /* Bold bullet */
+    position: absolute; /* Position bullet */
+    left: -1.5em; /* Adjust position */
+}
+
+/* Education Styles */
+.education {
+    margin-bottom: 20px; /* Spacing between sections */
+    padding: 20px; /* Inner padding */
+    border: 2px solid #3498db; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #444; /* Background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Education Title */
+.education h2 {
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 15px; /* Space below title */
+    color: #3498db; /* Title color */
+}
+
+/* Education List */
+.education ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+/* Education List Items */
+.education li {
+    margin: 10px 0; /* Space between items */
+    padding: 10px; /* Inner padding */
+    background-color: #555; /* Item background */
+    border-radius: 3px; /* Rounded corners */
+}
+
+/* Icon for Education */
+.education li::before {
+    content: "\2022"; /* Custom bullet */
+    color: #3498db; /* Bullet color */
+    font-weight: bold; /* Bold bullet */
+    position: absolute; /* Position bullet */
+    left: -1.5em; /* Adjust position */
+}
+
+
+
+/* skill Styles */
+.skill {
+    margin-bottom: 20px; /* Spacing between sections */
+    padding: 20px; /* Inner padding */
+    border: 2px solid #3498db; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #444; /* Background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* skill Title */
+.skill h2 {
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 15px; /* Space below title */
+    color: #3498db; /* Title color */
+}
+
+/* skill List */
+.skill ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+/* skill List Items */
+.skill li {
+    margin: 10px 0; /* Space between items */
+    padding: 10px; /* Inner padding */
+    background-color: #555; /* Item background */
+    border-radius: 3px; /* Rounded corners */
+}
+
+/* Icon for skill */
+.skill li::before {
+    content: "\2022"; /* Custom bullet */
+    color: #3498db; /* Bullet color */
+    font-weight: bold; /* Bold bullet */
+    position: absolute; /* Position bullet */
+    left: -1.5em; /* Adjust position */
+}
+
+.heading{
+    text-align: center;
+}
+
+#contact{
+    text-align: center;
+}
